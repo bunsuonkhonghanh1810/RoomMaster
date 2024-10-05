@@ -3,12 +3,14 @@ body {
 }
 header {
     display: flex;
-    height: 100px;
+    height: 70px;
     width: 100%;
     position: fixed;
     top: 0;
+    z-index: 1000;
     align-items: center;
     justify-content: space-between;
+    background-color: white;
 }
 img {
     height: 50%;
@@ -25,15 +27,15 @@ img {
     border: 2px solid #ccc;
 }
 #search-input {
-    padding: 10px 20px;
-    font-size: 16px;
+    padding: 5px 20px;
+    font-size: 14px;
     border: none;
     background: none;
     outline: none;
     width: 250px;
 }
 #search-button {
-    padding: 10px 20px;
+    padding: 5px 20px;
     border: none;
     background: none;
     cursor: pointer;
@@ -52,10 +54,11 @@ img {
 }
 #section-one {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 70px;
+    display: flex;
 }
 nav {
-    width: 20%;
+    width: 15%;
 }
 .menu {
     list-style-type: none;
@@ -105,10 +108,16 @@ nav {
     padding: 0;
     margin: 0;
 }
+.menu > li * {
+    pointer-events: none;
+}
 .menu > li.active + .submenu {
     display: block;
 }
-
 .menu > li.active .chevron-down {
     transform: rotate(180deg); 
+}
+main {
+    display: flex;
+    width: 85%;
 }
